@@ -18,7 +18,7 @@
 
 #include <stdio.h>
 
-
+// test of keys
 struct Months
 {
     int month;  // the calendar day of the month
