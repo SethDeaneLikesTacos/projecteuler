@@ -30,6 +30,8 @@ int main()
                 pair += j;
         }
 
+
+
         for (k = pair/2; k > 0; k--)
         {
             if (pair % k == 0)
@@ -37,7 +39,10 @@ int main()
         }
 
         if (i == pair2 && pair != pair2)
+        {
+            printf("%d,   %d   %d\n", i, pair, pair2);
             sum += i;
+        }
        
     }
     printf("ANSWER: %d\n", sum);
