@@ -14,9 +14,9 @@ import math
 dim = 1001
 
 def main():
-    total = 1
-    count = 1
-    diff = 2
+    total = 1   # total sum thus far
+    count = 1   # current number along the diagonal
+    diff = 2    # the length difference between corners of the box
 
     for i in range( math.floor(dim/2) * 4):
         
