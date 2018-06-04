@@ -1,33 +1,30 @@
 import pef
 
 """
-The number, 197, is called a circular prime because
-all rotations of the digits: 197, 971, and 719, are themselves prime.
+The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.
 
-There are thirteen such primes below 100: 2, 3, 5, 7,
-11, 13, 17, 31, 37, 71, 73, 79, and 97.
+Find the sum of all numbers, less than one million, which are palindromic in base 10 and base 2.
 
-How many circular primes are there below one million?
+(Please note that the palindromic number, in either base, may not include leading zeros.)
 """
-
 maximum = 1000000
-sum = 0
-
-
 
 def main():
+    total = 0
     for i in range(maximum):
+
         # get the binary forward and reversed string representation of current number
-        i_bin_for = str(bin(i))
-        i_bin_rev = reversed(i)
+        i_bin_for = str(bin(i))[2::]
+        i_bin_rev = i_bin_for[::-1]
 
         # get the decimal forward and reversed string representation of current number
         i_dec_for = str(i)
-        i_dec_rev = reversed(i)
+        i_dec_rev = i_dec_for[::-1]
 
-        for k in range(len(i_bin_for) // 2):
-            if i_bin_for[k] == i_bin_rev[k] and i_bin_for[k] == i_dec_rev[k]:
-                sum +=
+        if i_bin_for == i_bin_rev and i_dec_for == i_dec_rev:
+            total += int(i_dec_for)
+
+    pef.answer(total)
 
 
 main()
