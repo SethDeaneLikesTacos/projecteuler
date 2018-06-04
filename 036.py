@@ -27,7 +27,7 @@ def main():
 
         for k in range(len(i_bin_for) // 2):
             if i_bin_for[k] == i_bin_rev[k] and i_bin_for[k] == i_dec_rev[k]:
-                sum += 
+                sum +=
 
 
 main()
