@@ -38,6 +38,9 @@ def prime_sieve(minimum, maximum):
     below the input maximum.
     WARNING: maximum over 9999999 is bad news
     """
+    if minimum < 2:
+        minimum = 2
+
     limitn = maximum + 1
     not_prime = set()
     primes = set()

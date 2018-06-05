@@ -10,7 +10,7 @@ Find the product abc.
 """
 
 def main():
-    maximum = 1000;
+    maximum = 1000
 
     for a in range(1, int(maximum/2)):
         for b in range(1, int(maximum/2)):

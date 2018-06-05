@@ -6,7 +6,7 @@ Find the sum of all the primes below two million.
 """
 
 def main():
-    pef.answer(sum(pef.prime_sieve(2000000)))
+    pef.answer(sum(pef.prime_sieve(0, 2000000)))
 
 main()
     

@@ -9,6 +9,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 find the sum of the even-valued terms.
 """
 
+
 def main():
     total = 0
     maximum = 4000000

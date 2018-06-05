@@ -53,13 +53,10 @@ array = [
 
 
 def main():
-    dim = 20;
-    l = 4;
-    s = 0;
-    hsum = 0;
-    vsum = 0;
-    dsum_right = 0;
-    dsum_left = 0;
+    dim = 20
+    l = 4
+    s = 0
+
     for i in range(dim):
         for j in range(dim):
 

@@ -50,7 +50,6 @@ def identify_tens(n):
 
 def main():
     global total
-    lasttotal = 0
 
     for i in range(1, 1001):
 
@@ -84,8 +83,6 @@ def main():
         # ones place
         if ten == 0:
             identify_ones(one)
-
-        lasttotal = total;
 
     pef.answer(total)
 
