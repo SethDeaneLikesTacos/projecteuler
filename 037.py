@@ -12,14 +12,14 @@ right and right to left.
 NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes
 """
 
+
 def main():
     total = 0
     num_found = 0
 
-    # primes = pef.prime_sieve(11, 9999999)
-    # print("okay")
+    primes = pef.prime_sieve(11, 999999)
 
-    for i in range(11, 999999999, 2):
+    for i in primes:
         count = 0
 
         # determine amount to remove from each end
