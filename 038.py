@@ -32,7 +32,7 @@ def main():
             # we only want to check pandigitality if its a 9 digit number
             if len(num_str) == 9:
 
-                if int(num_str) > maximum and pef.is_pandigital_19(int(num_str)):
+                if int(num_str) > maximum and pef.is_pandigital(int(num_str), len(num_str)):
                     maximum = int(num_str)
 
     pef.answer(maximum)

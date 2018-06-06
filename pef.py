@@ -1,19 +1,14 @@
 import math
 
-def is_pandigital_19(number):
-    """
-    checks for pandigitality (if there is one of each digit "1-9" in the number)
-    :param number: number we are checking pandigitality
-    :return: True if pandigital
-    """
-    checked = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    for i in range(1, 10):
-        if str(i) in str(number):
-            checked[i-1] = 0
-    if len(str(number)) == 9 and len(set(checked))==1:
-        return True
-    else:
-        return False
+
+def is_pandigital(nr, n):
+    nr = str(nr)
+    beg=nr[0:n]
+    end=nr[-n:]
+    for i in map(str, range(1, n + 1)):
+        if i not in beg or i not in end:
+            return False
+    return True
 
 
 def isprime(n):
