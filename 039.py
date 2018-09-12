@@ -1,5 +1,5 @@
 import pef
-
+import time
 """
 If p is the perimeter of a right angle triangle with integral length sides,
 {a,b,c}, there are exactly three solutions for p = 120.
@@ -9,8 +9,8 @@ If p is the perimeter of a right angle triangle with integral length sides,
 For which value of p ≤ 1000, is the number of solutions maximised?
 """
 
-
 def main():
+    start_time = time.time()
     minimum = 1
     maximum = 1000
 
@@ -23,11 +23,12 @@ def main():
             for c in range(b, maximum//2):
 
                 if a*a + b*b == c*c and minimum <= a+b+c <= maximum:
-                    print(str(a) + " " + str(b) + " " + str(c) + " is a right triangle")
+                    # print(str(a) + " " + str(b) + " " + str(c) + " is a right triangle")
                     d[a+b+c] += 1
 
     maximized = max(d, key=d.get)
-    pef.answer(maximized)
 
+    end_time = time.time()
+    pef.answer(maximized, end_time - start_time)
 
 main()

@@ -1,4 +1,5 @@
 import pef
+import time
 """
 The sum of the squares of the first ten natural numbers is,
 
@@ -14,6 +15,8 @@ hundred natural numbers and the square of the sum.
 """
 
 def main():
+    start_time = time.time()
+
     maximum = 100
     sq = 0
     sumsq = 0
@@ -22,6 +25,8 @@ def main():
         sumsq += i
 
     sumsq = sumsq ** 2
-    pef.answer(sumsq - sq)
 
+    end_time = time.time()
+    pef.answer(sumsq - sq, end_time - start_time)
+    
 main()

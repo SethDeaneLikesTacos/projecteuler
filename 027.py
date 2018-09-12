@@ -1,4 +1,5 @@
 import pef
+import time
 """
 Euler discovered the remarkable quadratic formula:
 
@@ -27,6 +28,8 @@ starting with n=0.
 number = 1000
 
 def main():
+    start_time = time.time()
+
     maxn = 0
     maxtotal = 0
     total = 1
@@ -49,9 +52,10 @@ def main():
                 if sol not in primes:
                     break
 
-
             if total > maxtotal:
                 maxtotal = total
-    pef.answer(maxtotal)
+
+    end_time = time.time()
+    pef.answer(maxtime, end_time - start_time)
 
 main()

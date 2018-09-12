@@ -1,4 +1,5 @@
 import pef
+import time
 """
 The fraction 49/98 is a curious fraction, as an inexperienced
 mathematician in attempting to simplify it may incorrectly believe
@@ -17,13 +18,15 @@ terms, find the value of the denominator.
 
 def simplifyfraction(a, b):
     for i in range(b-1, 2, -1):
-        if (a/i) / (b/i) == a/b and a/i % 1 == 0 and b/i % 1 == 0: 
+        if (a/i) / (b/i) == a/b and a/i % 1 == 0 and b/i % 1 == 0:
             return a/i, b/i
     else:
         return a, b
 
 
 def main():
+    start_time = time.time()
+
     total = 1
 
     for i in range(10, 100):
@@ -47,7 +50,7 @@ def main():
                         a, b = simplifyfraction(li[0], li[0])
                         total *= a/b
 
-    pef.answer(int(total * 100))
-
+    end_time = time.time()
+    pef.answer(int(total * 100), end_time - start_time)
 
 main()

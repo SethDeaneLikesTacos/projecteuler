@@ -1,5 +1,5 @@
 import pef
-
+import time
 """
 An irrational decimal fraction is created by concatenating the positive integers:
 
@@ -12,8 +12,9 @@ If dn represents the nth digit of the fractional part, find the value of the fol
 d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
 """
 
-
 def main():
+    start_time = time.time()
+
     # generate number
     num_str = ''
     for i in range(1, 1000009):
@@ -25,7 +26,7 @@ def main():
     for i in numbers:
         total *= int(num_str[i])
 
-    pef.answer(total)
-
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()

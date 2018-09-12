@@ -1,4 +1,5 @@
 import pef
+import time
 """
 A perfect number is a number for which the sum of its proper
 divisors is exactly equal to the number. For example, the sum
@@ -32,11 +33,13 @@ def genabnums(maximum):
                 facs.append(j)
         if sum(facs) > i:
             abnums.add(i)
-    
+
     return abnums
 
 
 def main():
+    start_time = time.time()
+
     sumtot = 0
     ovetot = 0
     abnums = genabnums(maximum)
@@ -48,10 +51,7 @@ def main():
                 sumtot += i
                 break
 
-    pef.answer(ovetot - sumtot)
-        
-
+    end_time = time.time()
+    pef.answer(ovetot - sumtot, end_time - start_time)
 
 main()
-
-

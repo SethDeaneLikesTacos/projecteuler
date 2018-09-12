@@ -1,4 +1,5 @@
 import pef
+import time
 import math
 """
 A permutation is an ordered arrangement of objects.
@@ -18,6 +19,8 @@ elements = 10
 number = 1000000
 
 def main():
+    start_time = time.time()
+
     num_array = []  # numerator digits
     den_array = []  # denominator digits
     fac_array = []  # factorial digits (this is what we translate to decimal)
@@ -38,8 +41,7 @@ def main():
         ava_array = sorted(ava_array)
 
     # print answer
-    pef.answer(''.join(str(e) for e in dec_array))
+    end_time = time.time()
+    pef.answer(''.join(str(e) for e in dec_array), end_time - start_time)
 
 main()
-
-

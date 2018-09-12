@@ -1,4 +1,5 @@
 import pef
+import time
 """
 Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:
 
@@ -12,7 +13,6 @@ The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 """
 
-
 def filldigits(n):
     digits = []
     strn = str(n)
@@ -22,6 +22,7 @@ def filldigits(n):
 
 
 def main():
+    start_time = time.time()
 
     total = []
     for i in range(2, 200000):
@@ -30,7 +31,8 @@ def main():
             digits[d] = digits[d] ** 5
         if sum(digits) == i:
             total.append(i)
-    pef.answer(str(sum(total)))
 
+    end_time = time.time()
+    pef.answer(sum(total), end_time - start_time)
 
 main()

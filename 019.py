@@ -1,4 +1,5 @@
 import pef
+import time
 from datetime import date, timedelta
 """
 You are given the following information, but you may prefer
@@ -22,13 +23,17 @@ startdate = date(1901 ,1, 1)
 enddate   = date(2000 ,12, 31)
 
 def main():
-    count = 0
+    start_time = time.time()
+
+    total = 0
 
     # generate list of datetime object between start and end date
     dd = [startdate + timedelta(days=x) for x in range((enddate-startdate).days + 1)]
     for d in dd:
         if d.weekday() == 6 and d.day == 1:
-            count += 1
-    pef.answer(count)
+            total += 1
+
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()

@@ -1,4 +1,5 @@
 import pef
+import time
 import itertools
 """
 The number, 1406357289, is a 0 to 9 pandigital number because it is made up of
@@ -27,6 +28,8 @@ def intlist_to_int(intlist):
 
 
 def main():
+    start_time = time.time()
+
     h = list(itertools.permutations([1,2,3,4,5,6,7,8,9,0]))
     total = 0
 
@@ -47,9 +50,10 @@ def main():
             five % 11 == 0 and \
             six % 13 == 0 and \
             seven % 17 == 0:
-            print(intlist_to_int([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]]))
+            # print(intlist_to_int([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]]))
             total += intlist_to_int([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]])
 
-    pef.answer(total)
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()

@@ -1,4 +1,5 @@
 import pef
+import time
 """
 Let d(n) be defined as the sum of proper divisors of n
 (numbers less than n which divide evenly into n).
@@ -14,6 +15,8 @@ Evaluate the sum of all the amicable numbers under 10000.
 maximum = 10000
 
 def main():
+    start_time = time.time()
+
     total = 0
 
     for i in range(maximum):
@@ -29,8 +32,8 @@ def main():
 
         if i == pair2 and pair != pair2:
             total += i
-       
-    pef.answer(total)
+
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()
-

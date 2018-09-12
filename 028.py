@@ -1,4 +1,5 @@
 import pef
+import time
 import math
 """
 Starting with the number 1 and moving to the right in a clockwise direction a 5 by 5 spiral is formed as follows:
@@ -17,19 +18,20 @@ What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed 
 dim = 1001
 
 def main():
+    start_time = time.time()
+
     total = 1   # total sum thus far
     count = 1   # current number along the diagonal
     diff = 2    # the length difference between corners of the box
 
     for i in range( math.floor(dim/2) * 4):
-        
+
         count += diff
         if i % 4 == 3:
             diff += 2
         total += count
 
-    pef.answer(total)
-
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()
-    

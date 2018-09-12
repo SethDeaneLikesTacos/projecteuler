@@ -1,4 +1,5 @@
 import pef
+import time
 """
 The Fibonacci sequence is defined by the recurrence relation:
 
@@ -29,6 +30,8 @@ def fib(fibl):
     return fibl
 
 def main():
+    start_time = time.time()
+
     fibl = [1,1]
     for i in range(3, 5000):
         fibl = fib(fibl)
@@ -36,6 +39,7 @@ def main():
         if nDigits == 1000:
             break
 
-    pef.answer(i)
+    end_time = time.time()
+    pef.answer(i, end_time - start_time)
 
 main()

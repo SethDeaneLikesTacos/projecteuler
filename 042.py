@@ -1,5 +1,5 @@
 import pef
-
+import time
 """
 The nth term of the sequence of triangle numbers is given by, tn = ½n(n+1);
 so the first ten triangle numbers are:
@@ -15,8 +15,9 @@ Using words.txt (right click and 'Save Link/Target As...'), a 16K text file
 containing nearly two-thousand common English words, how many are triangle words?
 """
 
-
 def main():
+    start_time = time.time()
+
     words = open("resources/042.txt", "r").read().replace('"', "").split(',')
     num_triangle = 0
 
@@ -35,9 +36,9 @@ def main():
         # check if word val is a triangle number
         if word_val in tns:
             num_triangle += 1
-        print(word + " " + str(word_val))
+        # print(word + " " + str(word_val))
 
-    pef.answer(num_triangle)
-
+    end_time = time.time()
+    pef.answer(num_triangle, end_time - start_time)
 
 main()

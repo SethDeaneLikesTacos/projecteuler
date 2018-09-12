@@ -1,4 +1,5 @@
 import pef
+import time
 """
 In England the currency is made up of pound, £, and pence, p,
 and there are eight coins in general circulation:
@@ -14,6 +15,8 @@ coins = [200, 100, 50, 20, 10, 5, 2, 1]
 value = 200
 
 def main():
+    start_time = time.time()
+
     count = 0
     for a in range(int(value/coins[0]) + 1):
         for b in range(int(value/coins[1]) + 1):
@@ -41,6 +44,7 @@ def main():
                                     if a*coins[0] + b*coins[1] + c*coins[2] + d*coins[3] + e*coins[4] + f*coins[5] + g*coins[6] + h*coins[7] == value:
                                         count += 1
 
-    pef.answer(count)
+    end_time = time.time()
+    pef.answer(count, end_time - start_time)
 
 main()

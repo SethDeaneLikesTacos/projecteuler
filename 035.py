@@ -1,4 +1,5 @@
 import pef
+import time
 """
 The number, 197, is called a circular prime because
 all rotations of the digits: 197, 971, and 719, are themselves prime.
@@ -17,16 +18,18 @@ def rotate(num, amount):
 
     num = int(''.join(map(str,lnum)))
     return num
-    
+
 
 def main():
+    start_time = time.time()
+
     primes = pef.prime_sieve(0, 1000000)
 
     count = 4
     for i in primes:
         primecount = 1
         for j in range(1, len(str(i))):
-            
+
             num = rotate(i, j)
 
             if num in primes:
@@ -34,8 +37,7 @@ def main():
                 if primecount == len(str(i)):
                     count += 1
 
-    pef.answer(count)
-
-
+    end_time = time.time()
+    pef.answer(count, end_time - start_time)
 
 main()

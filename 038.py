@@ -1,5 +1,5 @@
 import pef
-
+import time
 """
 Take the number 192 and multiply it by each of 1, 2, and 3:
 
@@ -16,8 +16,9 @@ What is the largest 1 to 9 pandigital 9-digit number that can be formed as the
 concatenated product of an integer with (1,2, ... , n) where n > 1?
 """
 
-
 def main():
+    start_time = time.time()
+
     maximum = 0
 
     # initial number
@@ -35,7 +36,7 @@ def main():
                 if int(num_str) > maximum and pef.is_pandigital(int(num_str), len(num_str)):
                     maximum = int(num_str)
 
-    pef.answer(maximum)
-
+    end_time = time.time()
+    pef.answer(maximum, end_time - start_time)
 
 main()

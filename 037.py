@@ -1,5 +1,5 @@
 import pef
-
+import time
 """
 The number 3797 has an interesting property. Being prime itself, it is possible
 to continuously remove digits from left to right, and remain prime at each
@@ -12,8 +12,9 @@ right and right to left.
 NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes
 """
 
-
 def main():
+    start_time = time.time()
+
     total = 0
     num_found = 0
 
@@ -31,7 +32,7 @@ def main():
 
         # if removing from both ends gave expected result
         if count == len(str(i)):
-            print(str(i) + " IS A TRUNCATABLE PRIME")
+            # print(str(i) + " IS A TRUNCATABLE PRIME")
             num_found += 1
             total += i
 
@@ -39,7 +40,7 @@ def main():
         if num_found == 11:
             break
 
-    pef.answer(total)
-
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()

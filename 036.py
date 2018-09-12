@@ -1,5 +1,5 @@
 import pef
-
+import time
 """
 The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.
 
@@ -10,6 +10,8 @@ Find the sum of all numbers, less than one million, which are palindromic in bas
 maximum = 1000000
 
 def main():
+    start_time = time.time()
+
     total = 0
     for i in range(maximum):
 
@@ -24,7 +26,7 @@ def main():
         if i_bin_for == i_bin_rev and i_dec_for == i_dec_rev:
             total += int(i_dec_for)
 
-    pef.answer(total)
-
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()

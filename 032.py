@@ -1,4 +1,5 @@
 import pef
+import time
 """
 We shall say that an n-digit number is pandigital
 if it makes use of all the digits 1 to n exactly
@@ -28,7 +29,7 @@ def ispan(a, b, c):
 
     # initialize a know pandigital array for 1-9
     pan = [9, 8, 7, 6, 5, 4, 3, 2, 1]
-    
+
     # remove numbers from our know pandigital array
     for i in range(len(ispan)):
         if ispan[i] in pan:
@@ -43,6 +44,7 @@ def ispan(a, b, c):
 
 
 def main():
+    start_time = time.time()
 
     # keep tally of the sum of pandigital products
     total = 0
@@ -63,11 +65,13 @@ def main():
 
                     # at this point we know that the combination is 1-9 pandigital
                     # and we can print the number and add the sum
-                    print(str(a) + " * " + str(b) + " = " + str(product) +\
-                    " and is pandigital")
+                    # print(str(a) + " * " + str(b) + " = " + str(product) +\
+                    # " and is pandigital")
+                    
                     total += product
                     break
 
-    pef.answer(int(total))
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()

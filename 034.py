@@ -1,4 +1,5 @@
 import pef
+import time
 from math import factorial
 """
 145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
@@ -9,6 +10,8 @@ Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 """
 
 def main():
+    start_time = time.time()
+
     total = 0
     for i in range(3, 50000):
         l = [int(j) for j in str(i)]
@@ -19,8 +22,7 @@ def main():
             if tot == i:
                 total += i
 
-    pef.answer(total)
-
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()
-

@@ -1,4 +1,5 @@
 import pef
+import time
 """
 If the numbers 1 to 5 are written out in words: one, two, three, four, five,
 then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
@@ -8,7 +9,7 @@ words, how many letters would be used?
 
 
 NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two)
-contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of 
+contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of
 "and" when writing out numbers is in compliance with British usage.
 """
 
@@ -34,7 +35,7 @@ def identify_teens(n):
         total += 7
     if n == 13 or n == 14:
         total += 8
- 
+
 
 def identify_tens(n):
     global total
@@ -49,6 +50,7 @@ def identify_tens(n):
 
 
 def main():
+    start_time = time.time()
     global total
 
     for i in range(1, 1001):
@@ -69,7 +71,7 @@ def main():
         if hun != 0 and (ten != 0 or one != 0):
             identify_ones(hun)
             total += 10
-        
+
         # 10-15, above 15, 18 is a weird case
         if 10 <= teen and teen <= 15:
             identify_teens(teen)
@@ -84,7 +86,7 @@ def main():
         if ten == 0:
             identify_ones(one)
 
-    pef.answer(total)
+    end_time = time.time()
+    pef.answer(total, end_time - start_time)
 
 main()
-

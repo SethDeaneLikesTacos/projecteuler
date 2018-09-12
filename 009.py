@@ -1,4 +1,5 @@
 import pef
+import time
 """
 A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
 
@@ -10,6 +11,8 @@ Find the product abc.
 """
 
 def main():
+    start_time = time.time()
+
     maximum = 1000
 
     for a in range(1, int(maximum/2)):
@@ -17,7 +20,9 @@ def main():
             c = (a**2 + b**2)**.5
             hyp = a**2 + b**2
             if a+b+c == maximum and hyp**.5 == c and a<b and b<c:
-                pef.answer(int(a*b*c))
+
+                end_time = time.time()
+                pef.answer(int(a*b*c), end_time - start_time)
                 return
 
 main()

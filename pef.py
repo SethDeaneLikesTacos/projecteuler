@@ -1,4 +1,5 @@
 import math
+import sys
 
 
 def is_pandigital(nr, n):
@@ -73,5 +74,6 @@ def reversenum(number):
         number = number // 10
     return reverse
 
-def answer(number):
-    print("ANSWER: " + str(number))
+def answer(number, time_taken):
+    current_file = sys.argv[0].split("/")[0]    # get the running file name
+    print(f"Answer to {current_file} is [{number}] and completed in [{time_taken}]")

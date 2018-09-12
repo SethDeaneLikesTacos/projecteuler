@@ -1,4 +1,5 @@
 import pef
+import time
 import math
 """
 n! means n × (n − 1) × ... × 3 × 2 × 1
@@ -11,8 +12,11 @@ Find the sum of the digits in the number 100!
 
 n = 100
 def main():
+    start_time = time.time()
+
     b = math.factorial(n)
-    pef.answer(sum([int(i) for i in str(b)]))
+
+    end_time = time.time()
+    pef.answer(sum([int(i) for i in str(b)]), end_time - start_time)
 
 main()
-

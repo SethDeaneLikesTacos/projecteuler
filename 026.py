@@ -1,4 +1,5 @@
 import pef
+import time
 import decimal
 import re
 """
@@ -34,6 +35,8 @@ def cyclelen(n):
 
 
 def main():
+    start_time = time.time()
+
     # define how many decimal places there are
     decimal.getcontext().prec = maxdecs
     maxd = 0
@@ -53,6 +56,7 @@ def main():
             maxrecur = cl
             maxd = count
 
-    pef.answer(maxd)
+    end_time = time.time()
+    pef.answer(maxd, end_time - start_time)
 
 main()
