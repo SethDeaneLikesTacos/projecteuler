@@ -20,6 +20,7 @@ d8 d9 d10 = 289 is divisible by 17
 Find the sum of all 0 to 9 pandigital numbers with this property.
 """
 
+
 def intlist_to_int(intlist):
     returnable = ''
     for i in intlist:
@@ -28,7 +29,6 @@ def intlist_to_int(intlist):
 
 
 def main():
-    start_time = time.time()
 
     h = list(itertools.permutations([1,2,3,4,5,6,7,8,9,0]))
     total = 0
@@ -53,7 +53,11 @@ def main():
             # print(intlist_to_int([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]]))
             total += intlist_to_int([i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9]])
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

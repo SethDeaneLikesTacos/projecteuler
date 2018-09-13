@@ -10,8 +10,8 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 """
 
+
 def main():
-    start_time = time.time()
 
     maximum = 1000
 
@@ -21,8 +21,11 @@ def main():
             hyp = a**2 + b**2
             if a+b+c == maximum and hyp**.5 == c and a<b and b<c:
 
-                end_time = time.time()
-                pef.answer(int(a*b*c), end_time - start_time)
-                return
+                return int(a*b*c)
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -7,8 +7,8 @@ we can see that the 6th prime is 13.
 What is the 10,001st prime number?
 """
 
+
 def main():
-    start_time = time.time()
 
     i = 1
     count = 1
@@ -17,7 +17,11 @@ def main():
         if pef.isprime(i):
             count += 1
 
-    end_time = time.time()
-    pef.answer(i, end_time - start_time)
+    return i
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

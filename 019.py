@@ -19,11 +19,11 @@ How many Sundays fell on the first of the month during the
 twentieth century (1 Jan 1901 to 31 Dec 2000)?
 """
 
+
 startdate = date(1901 ,1, 1)
 enddate   = date(2000 ,12, 31)
 
 def main():
-    start_time = time.time()
 
     total = 0
 
@@ -33,7 +33,11 @@ def main():
         if d.weekday() == 6 and d.day == 1:
             total += 1
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

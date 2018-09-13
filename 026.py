@@ -22,6 +22,8 @@ be seen that 1/7 has a 6-digit recurring cycle.
 Find the value of d < 1000 for which 1/d contains the longest recurring
 cycle in its decimal fraction part.
 """
+
+
 maxdecs = 9999
 d = 1001
 
@@ -35,7 +37,6 @@ def cyclelen(n):
 
 
 def main():
-    start_time = time.time()
 
     # define how many decimal places there are
     decimal.getcontext().prec = maxdecs
@@ -56,7 +57,11 @@ def main():
             maxrecur = cl
             maxd = count
 
-    end_time = time.time()
-    pef.answer(maxd, end_time - start_time)
+    return maxd
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

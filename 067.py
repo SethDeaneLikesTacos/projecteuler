@@ -22,10 +22,10 @@ billion years to check them all. There is an efficient algorithm to solve it.
 ;o)
 """
 
+
 dim = 100
 
 def main():
-    start_time = time.time()
 
     # read array from file to array
     pyramid = []
@@ -51,7 +51,11 @@ def main():
             elif pyramid[i][j] <= pyramid[i][j+1]:
                 pyramid[i-1][j] += pyramid[i][j+1]
 
-    end_time = time.time()
-    pef.answer(pyramid[0][0], end_time - start_time)
+    returun pyramid[0][0]
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

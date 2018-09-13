@@ -15,12 +15,8 @@ difference are pentagonal and D = |Pk − Pj| is minimised; what is the value of
 D?
 """
 
-def is_pentagonal(number):
-    maybe_pentagonal =  (math.sqrt(1 + 24 * number) + 1.0) / 6.0
-    return maybe_pentagonal == int(maybe_pentagonal)
 
 def main():
-    start_time = time.time()
 
     not_found = True
 
@@ -31,11 +27,14 @@ def main():
         Pn = i * (3 * i - 1) / 2
         for j in range(1, i):
             Pp = j * (3 * j - 1) / 2
-            if (is_pentagonal(abs(Pn - Pp)) and is_pentagonal(abs(Pn + Pp))):
+            if (pef.is_pentagonal(abs(Pn - Pp)) and \
+                pef.is_pentagonal(abs(Pn + Pp))):
 
-                end_time = time.time()
-                pef.answer(int(abs(Pn - Pp)), end_time - start_time)
-                return
+                return int(abs(Pn - Pp))
 
 
-main()
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

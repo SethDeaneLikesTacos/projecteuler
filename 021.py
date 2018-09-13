@@ -12,10 +12,11 @@ divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
 
 Evaluate the sum of all the amicable numbers under 10000.
 """
+
+
 maximum = 10000
 
 def main():
-    start_time = time.time()
 
     total = 0
 
@@ -33,7 +34,11 @@ def main():
         if i == pair2 and pair != pair2:
             total += i
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -21,7 +21,6 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 
 
 def main():
-    start_time = time.time()
 
     maxlen = 0
 
@@ -40,7 +39,11 @@ def main():
             maxlen = l
             maxstart = i
 
-    end_time = time.time()
-    pef.answer(maxstart, end_time - start_time)
+    return maxstart
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

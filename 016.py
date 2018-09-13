@@ -6,8 +6,8 @@ import time
 What is the sum of the digits of the number 2^1000?
 """
 
+
 def main():
-    start_time = time.time()
 
     a = 2 ** 1000
     b = str(a)
@@ -20,7 +20,11 @@ def main():
     for digit in c:
         d += digit
 
-    end_time = time.time()
-    pef.answer(d, end_time - start_time)
+    return d
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -7,8 +7,8 @@ made from the product of two 2-digit numbers is 9009 = 91 × 99.
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
+
 def main():
-    start_time = time.time()
 
     maxpal = 0
     for i in range(1000, 1, -1):
@@ -18,7 +18,11 @@ def main():
             if revproduct == product and product > maxpal:
                 maxpal = product
 
-    end_time = time.time()
-    pef.answer(maxpal, end_time - start_time)
+    return maxpal
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

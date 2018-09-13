@@ -14,8 +14,8 @@ Find the difference between the sum of the squares of the first one
 hundred natural numbers and the square of the sum.
 """
 
+
 def main():
-    start_time = time.time()
 
     maximum = 100
     sq = 0
@@ -26,7 +26,11 @@ def main():
 
     sumsq = sumsq ** 2
 
-    end_time = time.time()
-    pef.answer(sumsq - sq, end_time - start_time)
+    return sumsq - sq
     
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -9,8 +9,8 @@ Find the sum of all numbers which are equal to the sum of the factorial of their
 Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 """
 
+
 def main():
-    start_time = time.time()
 
     total = 0
     for i in range(3, 50000):
@@ -22,7 +22,11 @@ def main():
             if tot == i:
                 total += i
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

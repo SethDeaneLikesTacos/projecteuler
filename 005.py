@@ -8,8 +8,8 @@ What is the smallest positive number that is evenly divisible
 by all of the numbers from 1 to 20?
 """
 
+
 def main():
-    start_time = time.time()
 
     currdiv = 0
     smallestdiv = 1
@@ -24,7 +24,11 @@ def main():
             maxi = smallestdiv * count
         smallestdiv = maxi
 
-    end_time = time.time()
-    pef.answer(smallestdiv, end_time - start_time)
+    return smallestdiv
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

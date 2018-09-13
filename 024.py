@@ -15,11 +15,11 @@ What is the millionth lexicographic permutation of
 the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
 """
 
+
 elements = 10
 number = 1000000
 
 def main():
-    start_time = time.time()
 
     num_array = []  # numerator digits
     den_array = []  # denominator digits
@@ -40,8 +40,11 @@ def main():
         ava_array[fac_array[i]] = elements
         ava_array = sorted(ava_array)
 
-    # print answer
-    end_time = time.time()
-    pef.answer(''.join(str(e) for e in dec_array), end_time - start_time)
+    return ''.join(str(e) for e in dec_array)
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

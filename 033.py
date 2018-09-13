@@ -25,7 +25,6 @@ def simplifyfraction(a, b):
 
 
 def main():
-    start_time = time.time()
 
     total = 1
 
@@ -50,7 +49,11 @@ def main():
                         a, b = simplifyfraction(li[0], li[0])
                         total *= a/b
 
-    end_time = time.time()
-    pef.answer(int(total * 100), end_time - start_time)
+    return int(total * 100)
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

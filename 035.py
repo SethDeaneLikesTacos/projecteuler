@@ -10,6 +10,7 @@ There are thirteen such primes below 100: 2, 3, 5, 7,
 How many circular primes are there below one million?
 """
 
+
 def rotate(num, amount):
     lnum = [int(j) for j in str(num)]
 
@@ -21,7 +22,6 @@ def rotate(num, amount):
 
 
 def main():
-    start_time = time.time()
 
     primes = pef.prime_sieve(0, 1000000)
 
@@ -37,7 +37,11 @@ def main():
                 if primecount == len(str(i)):
                     count += 1
 
-    end_time = time.time()
-    pef.answer(count, end_time - start_time)
+    return count
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -23,8 +23,8 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 """
 
+
 def main():
-    start_time = time.time()
 
     i = 0
     tri = 0
@@ -38,7 +38,11 @@ def main():
             if tri % j == 0:
                 divisorcount += 1
 
-    end_time = time.time()
-    pef.answer(tri, end_time - start_time)
+    return tri
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

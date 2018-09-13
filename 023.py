@@ -22,6 +22,7 @@ Find the sum of all the positive integers which cannot be written
 as the sum of two abundant numbers.
 """
 
+
 maximum = 28123
 
 def genabnums(maximum):
@@ -38,7 +39,6 @@ def genabnums(maximum):
 
 
 def main():
-    start_time = time.time()
 
     sumtot = 0
     ovetot = 0
@@ -51,7 +51,11 @@ def main():
                 sumtot += i
                 break
 
-    end_time = time.time()
-    pef.answer(ovetot - sumtot, end_time - start_time)
+    return ovetot - sumtot
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -7,10 +7,10 @@ Find the sum of all numbers, less than one million, which are palindromic in bas
 
 (Please note that the palindromic number, in either base, may not include leading zeros.)
 """
+
 maximum = 1000000
 
 def main():
-    start_time = time.time()
 
     total = 0
     for i in range(maximum):
@@ -26,7 +26,11 @@ def main():
         if i_bin_for == i_bin_rev and i_dec_for == i_dec_rev:
             total += int(i_dec_for)
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

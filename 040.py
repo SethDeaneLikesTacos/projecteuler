@@ -12,8 +12,8 @@ If dn represents the nth digit of the fractional part, find the value of the fol
 d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
 """
 
+
 def main():
-    start_time = time.time()
 
     # generate number
     num_str = ''
@@ -26,7 +26,11 @@ def main():
     for i in numbers:
         total *= int(num_str[i])
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -18,7 +18,14 @@ SOLUTION:
      40! / (20! * 20!) = 137846528820
 """
 
-def main():
-    pef.answer(137846528820, 0.0)
 
-main()
+def main():
+
+    return 137846528820
+
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

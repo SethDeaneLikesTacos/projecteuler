@@ -14,8 +14,8 @@ So, COLIN would obtain a score of 938 × 53 = 49714.
 What is the total of all the name scores in the file?
 """
 
+
 def main():
-    start_time = time.time()
 
     total = 0
     names = open("resources/022.txt", "r").read().replace('"', "").split(',')
@@ -30,7 +30,11 @@ def main():
         namesum = namesum * i
         total += namesum
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

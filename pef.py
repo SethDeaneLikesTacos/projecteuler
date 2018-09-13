@@ -74,6 +74,31 @@ def reversenum(number):
         number = number // 10
     return reverse
 
+
+def is_triangular(number):
+    """
+    Check if a number is triangular
+    """
+    maybe_triangular =  (math.sqrt(1 + 8 * number) - 1) / 2
+    return maybe_triangular == int(maybe_triangular)
+
+
+def is_pentagonal(number):
+    """
+    Check if a number is pentagonal
+    """
+    maybe_pentagonal =  (math.sqrt(1 + 24 * number) + 1) / 6
+    return maybe_pentagonal == int(maybe_pentagonal)
+
+
+def is_hexagonal(number):
+    """
+    Check if a number is hexagonal
+    """
+    maybe_hexagonal =  (math.sqrt(1 + 8 * number) + 1) / 4
+    return maybe_hexagonal == int(maybe_hexagonal)
+
+
 def answer(number, time_taken):
     current_file = sys.argv[0].split("/")[0]    # get the running file name
     print(f"Answer to {current_file} is [{number}] and completed in [{time_taken}]")

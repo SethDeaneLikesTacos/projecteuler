@@ -12,8 +12,8 @@ Find the thirteen adjacent digits in the 1000-digit number
 that have the greatest product. What is the value of this product?
 """
 
+
 def main():
-    start_time = time.time()
 
     # read from file to array
     ar = []
@@ -31,7 +31,11 @@ def main():
         if prod > maxprod:
             maxprod = prod
 
-    end_time = time.time()
-    pef.answer(maxprod, end_time - start_time)
+    return maxprod
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

@@ -44,7 +44,6 @@ def ispan(a, b, c):
 
 
 def main():
-    start_time = time.time()
 
     # keep tally of the sum of pandigital products
     total = 0
@@ -71,7 +70,11 @@ def main():
                     total += product
                     break
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

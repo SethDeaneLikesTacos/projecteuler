@@ -13,6 +13,7 @@ contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The u
 "and" when writing out numbers is in compliance with British usage.
 """
 
+
 total = 0
 
 def identify_ones(n):
@@ -50,7 +51,7 @@ def identify_tens(n):
 
 
 def main():
-    start_time = time.time()
+
     global total
 
     for i in range(1, 1001):
@@ -86,7 +87,12 @@ def main():
         if ten == 0:
             identify_ones(one)
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)
+    

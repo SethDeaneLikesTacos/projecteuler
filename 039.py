@@ -9,8 +9,9 @@ If p is the perimeter of a right angle triangle with integral length sides,
 For which value of p ≤ 1000, is the number of solutions maximised?
 """
 
+
 def main():
-    start_time = time.time()
+
     minimum = 1
     maximum = 1000
 
@@ -28,7 +29,11 @@ def main():
 
     maximized = max(d, key=d.get)
 
-    end_time = time.time()
-    pef.answer(maximized, end_time - start_time)
+    return maximized
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

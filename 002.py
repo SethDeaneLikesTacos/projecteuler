@@ -12,15 +12,20 @@ find the sum of the even-valued terms.
 
 
 def main():
-    start_time = time.time()
 
     total = 0
     maximum = 4000000
     fibnums = pef.genfib(maximum)
+
     for i in fibnums:
         if i%2 == 0:
             total += i
-            
+    
+    return total
+
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
     end_time = time.time()
-    pef.answer(total, end_time - start_time)
-main()
+    pef.answer(answer, end_time - start_time)

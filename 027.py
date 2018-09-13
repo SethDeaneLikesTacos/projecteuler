@@ -25,10 +25,10 @@ that produces the maximum number of primes for consecutive values of n,
 starting with n=0.
 """
 
+
 number = 1000
 
 def main():
-    start_time = time.time()
 
     maxn = 0
     maxtotal = 0
@@ -55,7 +55,11 @@ def main():
             if total > maxtotal:
                 maxtotal = total
 
-    end_time = time.time()
-    pef.answer(maxtime, end_time - start_time)
+    return maxtime
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

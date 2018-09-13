@@ -10,7 +10,6 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 
 
 def main():
-    start_time = time.time()
 
     # read array from file to array
     array = []
@@ -23,7 +22,11 @@ def main():
     for i in range(len(array)):
         x = x + array[i]
 
-    end_time = time.time()
-    pef.answer(str(x)[:10], end_time - start_time)
+    return str(x)[:10]
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

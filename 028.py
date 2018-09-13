@@ -15,10 +15,10 @@ It can be verified that the sum of the numbers on the diagonals is 101.
 What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 """
 
+
 dim = 1001
 
 def main():
-    start_time = time.time()
 
     total = 1   # total sum thus far
     count = 1   # current number along the diagonal
@@ -31,7 +31,12 @@ def main():
             diff += 2
         total += count
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)
+    

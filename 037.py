@@ -12,8 +12,8 @@ right and right to left.
 NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes
 """
 
+
 def main():
-    start_time = time.time()
 
     total = 0
     num_found = 0
@@ -40,7 +40,11 @@ def main():
         if num_found == 11:
             break
 
-    end_time = time.time()
-    pef.answer(total, end_time - start_time)
+    return total
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

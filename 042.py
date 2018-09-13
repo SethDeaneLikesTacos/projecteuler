@@ -15,8 +15,8 @@ Using words.txt (right click and 'Save Link/Target As...'), a 16K text file
 containing nearly two-thousand common English words, how many are triangle words?
 """
 
+
 def main():
-    start_time = time.time()
 
     words = open("resources/042.txt", "r").read().replace('"', "").split(',')
     num_triangle = 0
@@ -38,7 +38,11 @@ def main():
             num_triangle += 1
         # print(word + " " + str(word_val))
 
-    end_time = time.time()
-    pef.answer(num_triangle, end_time - start_time)
+    return num_triangle
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

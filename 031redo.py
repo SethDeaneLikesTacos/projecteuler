@@ -11,11 +11,11 @@ It is possible to make £2 in the following way:
 How many different ways can £2 be made using any number of coins?
 """
 
+
 coins = [200, 100, 50, 20, 10, 5, 2, 1]
 value = 200
 
 def main():
-    start_time = time.time()
 
     count = 0
     for a in range(int(value/coins[0]) + 1):
@@ -44,7 +44,11 @@ def main():
                                     if a*coins[0] + b*coins[1] + c*coins[2] + d*coins[3] + e*coins[4] + f*coins[5] + g*coins[6] + h*coins[7] == value:
                                         count += 1
 
-    end_time = time.time()
-    pef.answer(count, end_time - start_time)
+    return count
 
-main()
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
+    end_time = time.time()
+    pef.answer(answer, end_time - start_time)

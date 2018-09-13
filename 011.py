@@ -14,7 +14,6 @@ What is the greatest product of four adjacent numbers in the same direction (up,
 
 
 def main():
-    start_time = time.time()
 
     # read file array from file
     array = []
@@ -58,8 +57,12 @@ def main():
                 dsum_left = array[i][j] * array[i+1][j-1] * array[i+2][j-2] * array[i+3][j-3]
                 if s < dsum_left:
                     s = dsum_left
+    
+    return s
 
+
+if __name__ == "__main__":
+    start_time = time.time()
+    answer = main()
     end_time = time.time()
-    pef.answer(s, end_time - start_time)
-
-main()
+    pef.answer(answer, end_time - start_time)
