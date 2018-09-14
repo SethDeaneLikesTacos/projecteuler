@@ -15,7 +15,6 @@ Find the next triangle number that is also pentagonal and hexagonal.
 
 
 def main():
-    start_time = time.time()
 
     i = 2
     while True:
