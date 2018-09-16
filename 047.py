@@ -39,7 +39,7 @@ def number_unique_prime_factors(number, primes):
 def main():
 
     how_many_primes = 500000
-    primes = list(pef.prime_sieve(0, how_many_primes))
+    primes = pef.prime_sieve(how_many_primes)
 
     amt_to_find = 4
     i = amt_to_find

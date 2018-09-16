@@ -33,7 +33,7 @@ def main():
     maxn = 0
     maxtotal = 0
     total = 1
-    primes = pef.prime_sieve(0, number * number)
+    primes = pef.prime_sieve(number * number)
 
     for b in range(number+1):
         for a in range(number+1):

@@ -28,24 +28,25 @@ def isprime(n):
     return True
 
 
-def prime_sieve(minimum, maximum):
+def prime_sieve(maximum):
     """
     Efficiently creates a set with all prime numbers
     below the input maximum.
     WARNING: maximum over 9999999 is bad news
     """
-    if minimum < 2:
-        minimum = 2
-
-    limitn = maximum + 1
+    limitn = maximum+1
     not_prime = set()
-    primes = set()
-    for i in range(minimum, limitn):
+    primes = []
+
+    for i in range(2, limitn):
         if i in not_prime:
             continue
+
         for f in range(i*2, limitn, i):
             not_prime.add(f)
-        primes.add(i)
+
+        primes.append(i)
+
     return primes
 
 

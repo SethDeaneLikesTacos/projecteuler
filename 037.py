@@ -18,9 +18,9 @@ def main():
     total = 0
     num_found = 0
 
-    primes = pef.prime_sieve(11, 999999)
+    primes = pef.prime_sieve(999999)
 
-    for i in primes:
+    for i in primes[4:]:
         count = 0
 
         # determine amount to remove from each end

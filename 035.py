@@ -23,7 +23,7 @@ def rotate(num, amount):
 
 def main():
 
-    primes = pef.prime_sieve(0, 1000000)
+    primes = pef.prime_sieve(1000000)
 
     count = 4
     for i in primes:
@@ -32,7 +32,7 @@ def main():
 
             num = rotate(i, j)
 
-            if num in primes:
+            if pef.isprime(num):
                 primecount += 1
                 if primecount == len(str(i)):
                     count += 1
