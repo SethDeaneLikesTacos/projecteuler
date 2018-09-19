@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 It was proposed by Christian Goldbach that every odd composite number can be

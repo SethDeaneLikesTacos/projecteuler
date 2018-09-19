@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The Fibonacci sequence is defined by the recurrence relation:

@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 Consider all integer combinations of ab for 2 ≤ a ≤ 5 and 2 ≤ b ≤ 5:

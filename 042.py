@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The nth term of the sequence of triangle numbers is given by, tn = ½n(n+1);

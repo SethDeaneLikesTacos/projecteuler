@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The first two consecutive numbers to have two distinct prime factors are:

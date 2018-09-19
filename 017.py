@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 If the numbers 1 to 5 are written out in words: one, two, three, four, five,

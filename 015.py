@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 Starting in the top left corner of a 2×2 grid, and only

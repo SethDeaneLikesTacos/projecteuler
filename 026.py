@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 import decimal
 import re

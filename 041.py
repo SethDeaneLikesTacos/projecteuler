@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 We shall say that an n-digit number is pandigital if it makes use of all the

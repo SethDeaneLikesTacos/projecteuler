@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 Using names.txt (right click and 'Save Link/Target As...'), a

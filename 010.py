@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.

@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 If p is the perimeter of a right angle triangle with integral length sides,

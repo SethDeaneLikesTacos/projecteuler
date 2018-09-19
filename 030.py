@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:

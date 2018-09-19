@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The following iterative sequence is defined for the set of positive integers:

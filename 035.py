@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The number, 197, is called a circular prime because

@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The prime 41, can be written as the sum of six consecutive primes:

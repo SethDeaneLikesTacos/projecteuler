@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 Let d(n) be defined as the sum of proper divisors of n

@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 A palindromic number reads the same both ways. The largest palindrome

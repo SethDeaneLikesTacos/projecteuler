@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 import math
 """
@@ -17,7 +17,7 @@ def main():
 
     b = math.factorial(n)
 
-   	return sum([int(i) for i in str(b)])
+    return sum([int(i) for i in str(b)])
 
 
 if __name__ == "__main__":

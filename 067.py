@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 By starting at the top of the triangle below and moving to adjacent

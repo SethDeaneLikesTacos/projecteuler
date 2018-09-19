@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 An irrational decimal fraction is created by concatenating the positive integers:

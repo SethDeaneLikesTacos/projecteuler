@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 A perfect number is a number for which the sum of its proper

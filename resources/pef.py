@@ -101,5 +101,5 @@ def is_hexagonal(number):
 
 
 def answer(number, time_taken):
-    current_file = sys.argv[0].split("/")[0]    # get the running file name
+    current_file = sys.argv[0].split("/")[-1]    # get the running file name
     print(f"Answer to {current_file} is [{number}] and completed in [{time_taken}]")

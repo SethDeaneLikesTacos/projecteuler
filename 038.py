@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 Take the number 192 and multiply it by each of 1, 2, and 3:

@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The fraction 49/98 is a curious fraction, as an inexperienced

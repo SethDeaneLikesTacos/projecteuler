@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The four adjacent digits in the 1000-digit number that have

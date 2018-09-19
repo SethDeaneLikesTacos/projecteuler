@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 In England the currency is made up of pound, £, and pence, p,

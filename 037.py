@@ -1,4 +1,4 @@
-import pef
+import resources.pef as pef
 import time
 """
 The number 3797 has an interesting property. Being prime itself, it is possible
