@@ -1,5 +1,6 @@
 import pef
 import time
+import itertools
 """
 The arithmetic sequence, 1487, 4817, 8147, in which each of the terms increases
 by 3330, is unusual in two ways:
@@ -11,8 +12,6 @@ exhibiting this property, but there is one other 4-digit increasing sequence.
 
 What 12-digit number do you form by concatenating the three terms in this
 sequence?
-
-NOTE: This one takes about 40 seconds
 """
 
 
@@ -22,14 +21,20 @@ def main():
     primes = pef.prime_sieve(9999)[168:]
 
     for i in primes:
-        for j in primes:
-            if j < i: continue
-            for k in primes:
-                if k < j: continue
+        jk_list = [int(x) for x in str(i)]    # list format of i
+        jk_list_itts = list(itertools.permutations(jk_list))
+
+        for j in jk_list_itts:
+            # convert list of ints to int
+            j = int(''.join(map(str,j)))
+
+            for k in jk_list_itts:
+                # convert list of ints to int
+                k = int(''.join(map(str,k)))
+
                 if abs(i - j) == abs(j - k) and \
-                    i != j and i != k and j != k and \
-                    sorted(map(int, str(i))) == sorted(map(int, str(j))) and \
-                    sorted(map(int, str(j))) == sorted(map(int, str(k))) and \
+                    i != j != k and i < j < k and \
+                    pef.isprime(j) and pef.isprime(k) and \
                     i != 1487:
 
                     return ''.join(str(i) + str(j) + str(k))
