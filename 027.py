@@ -25,37 +25,35 @@ that produces the maximum number of primes for consecutive values of n,
 starting with n=0.
 """
 
-
-number = 1000
-
+# 59231
 def main():
 
     maxn = 0
-    maxtotal = 0
-    total = 1
-    primes = pef.prime_sieve(number * number)
+    answer = 0
+    for a in range(1000):
+        for b in range(1000):
+            streak_dict = {"a": 0, "b":0, "c":0, "d":0}
 
-    for b in range(number+1):
-        for a in range(number+1):
-            for n in range(number+1):
-                sola = n**2 + a*n + b
-                solb = n**2 - a*n + b
-                solc = n**2 + a*n - b
-                sold = n**2 - a*n - b
-                print(str(n) + "^2 + " + str(a) + "*" + str(n) + " + " + str(b) + " = " + str(sola))
-
-                if n > maxn:
-                    print(a,b)
-                    total = a * b
-                    maxn = n
-
-                if sol not in primes:
+            for n in range(4000):
+                if pef.isprime(n**2 + (n*a) + b):
+                    # print(str(n) + "a")
+                    streak_dict["a"] += 1
+                elif pef.isprime(n**2 + (n*a) - b):
+                    # print(str(n) + "b")
+                    streak_dict["b"] += 1
+                elif pef.isprime(n**2 - (n*a) + b):
+                    streak_dict["c"] += 1
+                elif pef.isprime(n**2 - (n*a) - b):
+                    streak_dict["d"] += 1
+                else:
                     break
 
-            if total > maxtotal:
-                maxtotal = total
+                if maxn <= streak_dict[max(streak_dict.keys(), key=(lambda k: streak_dict[k]))]:
+                    print(f"{n}**2 + {n}*{a} + {b} : {n}")
+                    maxn = streak_dict[max(streak_dict.keys(), key=(lambda k: streak_dict[k]))]
+                    answer = a * b
 
-    return maxtime
+    return answer
 
 
 if __name__ == "__main__":
