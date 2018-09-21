@@ -30,27 +30,19 @@ def main():
 
     maxn = 0
     answer = 0
-    for a in range(1000):
-        for b in range(1000):
-            streak_dict = {"a": 0, "b":0, "c":0, "d":0}
+    for a in range(-1000,1001):
+        for b in range(-1000,1000):
+            streak = 0
+            for n in range(400):
 
-            for n in range(4000):
                 if pef.isprime(n**2 + (n*a) + b):
-                    # print(str(n) + "a")
-                    streak_dict["a"] += 1
-                elif pef.isprime(n**2 + (n*a) - b):
-                    # print(str(n) + "b")
-                    streak_dict["b"] += 1
-                elif pef.isprime(n**2 - (n*a) + b):
-                    streak_dict["c"] += 1
-                elif pef.isprime(n**2 - (n*a) - b):
-                    streak_dict["d"] += 1
+                    streak += 1
                 else:
                     break
 
-                if maxn <= streak_dict[max(streak_dict.keys(), key=(lambda k: streak_dict[k]))]:
-                    print(f"{n}**2 + {n}*{a} + {b} : {n}")
-                    maxn = streak_dict[max(streak_dict.keys(), key=(lambda k: streak_dict[k]))]
+                if maxn <= n:
+                    print(f"{n}**2 + {n}*{a} + {b} = {n**2 + (n*a) + b} | new streak generated {maxn}")
+                    maxn = n
                     answer = a * b
 
     return answer
