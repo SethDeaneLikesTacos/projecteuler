@@ -16,18 +16,25 @@ consecutive primes?
 
 
 def main():
-    maximum = 100
+    maximum = 1000000
     primes = pef.prime_sieve(maximum)
 
-    looping = True
-    while looping:
+    dic = {}
+    dic['len'] = 0
+    dic['num'] = 0
 
-        sum = 0
-        longest = 0
-        for p in primes:
-            sum += p
-            if pef.isprime(sum):
-                return sum
+    for a in range(10):
+        for b in range(a,maximum):
+            inq = primes[a:b]   # array in question
+            if sum(inq) > maximum:
+                break
+
+            if len(inq) > dic['len'] and sum(inq) > dic['num'] and \
+                pef.isprime(sum(inq)):
+                dic['len'] = len(inq)
+                dic['num'] = sum(inq)
+
+    return dic['num']
 
 
 
