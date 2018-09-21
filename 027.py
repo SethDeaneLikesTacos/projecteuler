@@ -25,7 +25,7 @@ that produces the maximum number of primes for consecutive values of n,
 starting with n=0.
 """
 
-# 59231
+
 def main():
 
     maxn = 0
