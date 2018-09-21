@@ -33,7 +33,7 @@ def main():
     for a in range(-1000,1001):
         for b in range(-1000,1000):
             streak = 0
-            for n in range(400):
+            for n in range(80):
 
                 if pef.isprime(n**2 + (n*a) + b):
                     streak += 1
@@ -41,7 +41,6 @@ def main():
                     break
 
                 if maxn <= n:
-                    print(f"{n}**2 + {n}*{a} + {b} = {n**2 + (n*a) + b} | new streak generated {maxn}")
                     maxn = n
                     answer = a * b
 
