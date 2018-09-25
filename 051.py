@@ -1,6 +1,9 @@
 import resources.pef as pef
 import time
 from itertools import permutations
+"""
+https://projecteuler.net/problem=51
+"""
 
 def degree_prime_family(number, unidentifieds):
 
