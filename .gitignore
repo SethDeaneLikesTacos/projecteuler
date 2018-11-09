@@ -2,4 +2,5 @@
 *.swo
 pef.pyc
 __pycache__/*
+resources/__pycache__/*
 .DS_Store
