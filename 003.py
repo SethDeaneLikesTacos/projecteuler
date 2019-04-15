@@ -10,7 +10,7 @@ def main():
 
     number = 600851475143
     for i in range(int(math.sqrt(number)), 1, -1):
-        if pef.isprime(i) and number % i == 0:
+        if pef.is_prime(i) and number % i == 0:
 
         	return i
 

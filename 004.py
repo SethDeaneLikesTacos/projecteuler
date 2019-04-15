@@ -11,7 +11,7 @@ def main():
     for i in range(1000, 1, -1):
         for j in range(1000, 1, -1):
             product = i * j
-            revproduct = pef.reversenum(product)
+            revproduct = pef.reverse_num(product)
             if revproduct == product and product > maxpal:
                 maxpal = product
 

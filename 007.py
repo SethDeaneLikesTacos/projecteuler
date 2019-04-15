@@ -11,7 +11,7 @@ def main():
     count = 1
     while count < 10001:
         i += 1
-        if pef.isprime(i):
+        if pef.is_prime(i):
             count += 1
 
     return i

@@ -14,7 +14,7 @@ def main():
             streak = 0
             for n in range(80):
 
-                if pef.isprime(n**2 + (n*a) + b):
+                if pef.is_prime(n**2 + (n*a) + b):
                     streak += 1
                 else:
                     break

@@ -12,7 +12,7 @@ def main():
     maxprime = 0
     primes = set(pef.prime_sieve(99999999))
     for i in primes:
-        if pef.is_pandigital(i, len(str(i))):
+        if pef.is_pandigital(i):
             maxprime = i
 
     return maxprime

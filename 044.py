@@ -17,8 +17,8 @@ def main():
         Pn = i * (3 * i - 1) / 2
         for j in range(1, i):
             Pp = j * (3 * j - 1) / 2
-            if (pef.is_pentagonal(abs(Pn - Pp)) and \
-                pef.is_pentagonal(abs(Pn + Pp))):
+            if (pef.is_shape(abs(Pn - Pp), 5) and \
+                pef.is_shape(abs(Pn + Pp), 5)):
 
                 return int(abs(Pn - Pp))
 

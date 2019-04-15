@@ -20,7 +20,7 @@ def main():
                 break
 
             if len(inq) > dic['len'] and sum(inq) > dic['num'] and \
-                pef.isprime(sum(inq)):
+                pef.is_prime(sum(inq)):
                 dic['len'] = len(inq)
                 dic['num'] = sum(inq)
 

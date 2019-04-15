@@ -22,7 +22,7 @@ def main():
                 return dist + 1
 
         # if ratio of primes 
-        if pef.isprime(cur):
+        if pef.is_prime(cur):
             total_primes += 1
 
         # increment the distance

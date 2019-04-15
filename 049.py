@@ -25,7 +25,7 @@ def main():
 
                 if abs(i - j) == abs(j - k) and \
                     i != j != k and i < j < k and \
-                    pef.isprime(j) and pef.isprime(k) and \
+                    pef.is_prime(j) and pef.is_prime(k) and \
                     i != 1487:
 
                     return ''.join(str(i) + str(j) + str(k))

@@ -16,7 +16,7 @@ def number_unique_prime_factors(number, primes):
             factors.append(primes[i])
             i = -1
 
-        if pef.isprime(number):
+        if pef.is_prime(number):
             not_completely_factored = False
             factors.append(int(number))
         i += 1

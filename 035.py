@@ -26,7 +26,7 @@ def main():
 
             num = rotate(i, j)
 
-            if pef.isprime(num):
+            if pef.is_prime(num):
                 primecount += 1
                 if primecount == len(str(i)):
                     count += 1

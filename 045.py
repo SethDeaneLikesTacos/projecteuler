@@ -13,7 +13,7 @@ def main():
         i += 1
 
         number = int((i * (i+1) ) / 2)
-        if (pef.is_hexagonal(number) and pef.is_pentagonal(number) and number != 40755):
+        if (pef.is_shape(number, 6) and pef.is_shape(number, 5) and number != 40755):
 
             return number
 

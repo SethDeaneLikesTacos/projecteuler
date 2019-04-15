@@ -39,11 +39,11 @@ def degree_prime_family(number, unidentifieds):
                 continue
 
             # keep track of the first prime found in the permutation
-            if pef.isprime(int(perm_filled)) and found_prime == False:
+            if pef.is_prime(int(perm_filled)) and found_prime == False:
                 first_prime = int(perm_filled)
                 found_prime = True
 
-            if pef.isprime(int(perm_filled)):
+            if pef.is_prime(int(perm_filled)):
                 num_primes += 1
 
                 if num_primes >= max_num_primes:

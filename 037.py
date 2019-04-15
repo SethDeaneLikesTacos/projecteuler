@@ -19,7 +19,7 @@ def main():
         for d in range(len(str(i))):
 
             # check if the shortened numbers are prime
-            if pef.isprime(int(str(i)[d::])) and pef.isprime(int(str(i)[0:d+1])):
+            if pef.is_prime(int(str(i)[d::])) and pef.is_prime(int(str(i)[0:d+1])):
                 count += 1
 
         # if removing from both ends gave expected result

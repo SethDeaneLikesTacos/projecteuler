@@ -14,7 +14,7 @@ def main():
         i += 2
 
         # if i is prime, then loop again
-        if (pef.isprime(i)):
+        if (pef.is_prime(i)):
             continue
 
         # set our variable to see if we make it through all combinations without
@@ -23,7 +23,7 @@ def main():
 
         # otherwise, see if we can find an exception
         for j in range(i, 0, -1):
-            if (pef.isprime(j)):
+            if (pef.is_prime(j)):
 
                 k = 1
                 # only need to check the answer if its going to be less than i

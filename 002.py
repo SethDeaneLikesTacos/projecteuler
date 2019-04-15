@@ -9,7 +9,7 @@ def main():
 
     total = 0
     maximum = 4000000
-    fibnums = pef.genfib(maximum)
+    fibnums = pef.gen_fib(maximum)
 
     for i in fibnums:
         if i%2 == 0:
