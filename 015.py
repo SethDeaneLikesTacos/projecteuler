@@ -2,7 +2,7 @@ import resources.pef as pef
 import time
 """
 https://projecteuler.net/problem=15
-
+0.0
 SOLUTION: 40! / (20! * 20!) = 137846528820
 """
 

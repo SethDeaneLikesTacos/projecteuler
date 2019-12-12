@@ -3,6 +3,7 @@ import time
 import math
 """
 https://projecteuler.net/problem=3
+2.447605848312378
 """
 
 

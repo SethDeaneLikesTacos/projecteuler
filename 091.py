@@ -5,6 +5,7 @@ import numpy as np
 from itertools import product
 """
 https://projecteuler.net/problem=91
+37.867307901382446
 """
 
 xy_max = 50

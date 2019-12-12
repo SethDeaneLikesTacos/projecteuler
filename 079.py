@@ -2,7 +2,7 @@ import resources.pef as pef
 import time
 """
 https://projecteuler.net/problem=79
-Solved it without coding.
+0.0
 """
 
 

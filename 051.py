@@ -3,6 +3,7 @@ import time
 from itertools import permutations
 """
 https://projecteuler.net/problem=51
+11.51527214050293
 """
 
 def degree_prime_family(number, unidentifieds):

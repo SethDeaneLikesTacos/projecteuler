@@ -3,6 +3,7 @@ import time
 import itertools
 """
 https://projecteuler.net/problem=43
+47.15563774108887
 """
 
 

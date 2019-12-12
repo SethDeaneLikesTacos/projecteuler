@@ -4,6 +4,7 @@ import decimal
 import re
 """
 https://projecteuler.net/problem=26
+2.314512014389038
 """
 
 

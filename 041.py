@@ -2,8 +2,7 @@ import resources.pef as pef
 import time
 """
 https://projecteuler.net/problem=41
-
-NOTE: This one takes a long time :/
+145.40809226036072
 """
 
 

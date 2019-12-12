@@ -2,6 +2,7 @@ import resources.pef as pef
 import time
 """
 https://projecteuler.net/problem=32
+2.487231969833374
 """
 
 # a = multplicand

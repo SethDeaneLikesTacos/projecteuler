@@ -3,6 +3,7 @@ import time
 from math import factorial as fac
 """
 https://projecteuler.net/problem=53
+0.013901948928833008
 """
 
 

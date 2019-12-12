@@ -3,6 +3,7 @@ import time
 import math
 """
 https://projecteuler.net/problem=74
+96.12918090820312
 """
 
 def main():

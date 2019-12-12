@@ -3,6 +3,7 @@ import time
 from datetime import date, timedelta
 """
 https://projecteuler.net/problem=19
+0.03850817680358887
 """
 
 

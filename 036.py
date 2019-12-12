@@ -2,6 +2,7 @@ import resources.pef as pef
 import time
 """
 https://projecteuler.net/problem=36
+1.1346309185028076
 """
 
 maximum = 1000000
